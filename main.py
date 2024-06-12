@@ -36,6 +36,30 @@ if __name__ == "__main__":
     print("How can i help you?")
     speak("How can i help you?")
 
+    while True:
+        query = takeCmd().lower()
+        if "hello" in query:
+            print("Yes Sir")
+            speak("Yes Sir")
+        elif "stop this program" in query:
+            print("Ok Sir, I am going to stop this Program.")
+            speak("Ok Sir, I am going to stop this Program.")
+            exit()
+        elif "who are you" in query:
+            print("I am Hari")
+            speak("I am Hari")
+        elif "hu r u" in query:
+            print("I am Hari")
+            speak("I am Hari")
+        elif "how are you" in query:
+            print("I am fine")
+            speak("I am fine")
+        elif "how r u" in query:
+            print("I am fine")
+            speak("I am fine")
+
+
+
 
 
 # query = takeCmd()
