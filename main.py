@@ -28,8 +28,18 @@ def takeCmd():
         return "None"
     return query
 
-query = takeCmd()
+if __name__ == "__main__":
 
-print(query)
-speak(f"{query}")
+    from greetme import greet
+    print(f"Hello, {greet()} Sir.")
+    speak(f"Hello, {greet()} Sir.")
+    print("How can i help you?")
+    speak("How can i help you?")
+
+
+
+# query = takeCmd()
+#
+# print(query)
+# speak(f"{query}")
 
