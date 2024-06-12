@@ -57,6 +57,24 @@ if __name__ == "__main__":
         elif "how r u" in query:
             print("I am fine")
             speak("I am fine")
+        elif "who created you" in query:
+            print("I am Created under a Capstone Project-I, by the CSDA [23-2026] Students of IIT Patna, group of 16th.")
+            speak("I am Created under a Capstone Project, by the CSDA Students of IIT Patna, group of 16th.")
+        elif "members in group 16" in query:
+            print(["There are 5 members in group 16:"
+                   "1. Subhash Kumar Rana",
+                   "2. Aanchal Kumari",
+                   "3. Saurav Kumar",
+                   "4. Rajesh Kumar",
+                   "5. Suyansh Kumar"])
+            speak(["There are 5 members in group 16:",
+                   " Subhash Kumar Rana",
+                   " Aanchal Kumari",
+                   " Saurav Kumar",
+                   " Rajesh Kumar",
+                   " And Suyansh Kumar"])
+
+
 
 
 
