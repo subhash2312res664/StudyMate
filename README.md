@@ -1,6 +1,7 @@
-<u><b>Hello, This is Group-16 Capstone Project-I [IIT Patna 2024] </b></u> <br>
+<u><b>Hello, This is Group-16 Capstone Project-I [IIT Patna] </b></u> <br>
 <hr>
-We are working on a Capstone Project (CSDA:2024). <br>
+Batch: <b>2023-26 (CSDA)</b> <br>
+We are working on a Capstone Project . <br>
 Project Name: <b> StudyMate</b> 
 <br>
 <b>About StudyMate:</b> <b> StudyMate (Our Virtual Study Assistant - Access All Your Learning Resources with a Simple Voice Command)</b>
@@ -11,7 +12,7 @@ Project Name: <b> StudyMate</b>
 <b>Members in this gr:</b>
 <br>
 1. Subhash Kumar Rana <br>
-    I'd: <a href="subhash_2312res664@iitp.ac.in">subhash_2312res664</a>  <br>
+    I'd: <a href="mailto:subhash_2312res664@iitp.ac.in">subhash_2312res664</a>  <br>
 2. Aanchal Kumari  <br>
     I'd: <a href="aanchal_2312res05@iitp.ac.in">aanchal_2312res05</a>  <br>
 3. Rajesh Kumawat  <br>
