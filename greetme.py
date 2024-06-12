@@ -8,9 +8,9 @@ def greet():
         grt = "Good Morning"
     elif 12 <= hr < 15:
         grt = "Good Afternoon"
-    elif 15 >= hr < 20:
+    elif 15 <= hr < 20:
         grt = "Good Evening"
-    else:
+    elif 20 >= hr:
         grt = "Good Night"
     return grt
 
