@@ -5,13 +5,21 @@ from spktakecmd import speak
 from spktakecmd import takeCmd
 
 def whatis(query):
-    print("Searching wikipedia...")
-    speak("Searchin wikipedia...")
-    query = query.replace("what is","")
-    query = query.replace("Hey","")
-    query = query.replace("Hari","")
-    results = wikipedia.summary(query,sentences=2)
-    speak(results)
+    speak("Searching wikipedia...")
+    # query = query.replace("who is","")
+    # query = query.replace("what is","")
+    try:
+        results = wikipedia.summary(query,sentences=2)
+        print(results)
+        speak(results)
+    except Exception as e:
+        print("No speakable content available..")
+        speak("No speakable content available")
 
-# whatis()
+
+
+
+
+# query = input("Write query:")
+# whatis(query)
 
