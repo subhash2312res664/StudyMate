@@ -55,11 +55,17 @@ if __name__ == "__main__":
             from search import whatis
             whatis(query)
 
-        elif "who is" in query:
+        elif "what is" in query:
             from search import whatis
             whatis(query)
 
-
+        elif "open google" in query:
+            webbrowser.open('google.com')
+        elif "search google" in query:
+            from search import searchGoogle
+            searchGoogle(query)
+        elif "just open youtube" in query:
+            webbrowser.open('youtube.com')
 
 
 
