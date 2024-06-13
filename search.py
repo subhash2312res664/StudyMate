@@ -16,6 +16,23 @@ def whatis(query):
         print("No speakable content available..")
         speak("No speakable content available")
 
+def searchGoogle(query):
+        import wikipedia
+        import pywhatkit
+        query = query.replace("hari","")
+        query = query.replace("google search","")
+        query = query.replace("google","")
+        query = query.replace("search","")
+        speak("This is what I found on google")
+
+        try:
+            pywhatkit.search(query)
+            result = wikipedia.summary(query,1)
+            speak(result)
+
+        except:
+            speak("No speakable output available")
+
 
 
 
