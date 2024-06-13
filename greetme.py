@@ -1,6 +1,6 @@
-import datetime
 
 def greet():
+    import datetime
     global grt
     hr = int(datetime.datetime.now().hour)
 
@@ -10,9 +10,9 @@ def greet():
         grt = "Good Afternoon"
     elif 15 <= hr < 20:
         grt = "Good Evening"
-    elif 20 >= hr:
+    else:
         grt = "Good Night"
     return grt
-
+#
 # greet()
 # print(grt)
