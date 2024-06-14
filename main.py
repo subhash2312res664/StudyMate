@@ -26,17 +26,11 @@ if __name__ == "__main__":
             speak("Ok Sir, I am going to stop this Program.")
             exit()
 
-        elif "who are you" in query:
-            print("I am Hari")
-            speak("I am Hari")
-        elif "hu r u" in query:
+        elif "who are you" in query or "hu r u" in query:
             print("I am Hari")
             speak("I am Hari")
 
-        elif "how are you" in query:
-            print("I am fine")
-            speak("I am fine")
-        elif "how r u" in query:
+        elif "how are you" in query or "how r u" in query:
             print("I am fine")
             speak("I am fine")
 
@@ -51,11 +45,7 @@ if __name__ == "__main__":
             speak(f"There are {len(members)} members in group 16:\n")
             speak(f"{members[0:]}")
 
-        elif "what is" in query:
-            from search import whatis
-            whatis(query)
-
-        elif "what is" in query:
+        elif "what is" in query or "who is" in query:
             from search import whatis
             whatis(query)
 
@@ -66,6 +56,15 @@ if __name__ == "__main__":
             searchGoogle(query)
         elif "just open youtube" in query:
             webbrowser.open('youtube.com')
+
+        elif "search youtube" in query:
+            from search import searchYoutube
+            searchYoutube(query)
+        elif "play youtube" in query:
+            from search import plyYoutube
+            plyYoutube(query)
+
+
 
 
 

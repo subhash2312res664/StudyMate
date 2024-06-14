@@ -1,6 +1,7 @@
 # Here we defined function for Internet Search:
 import wikipedia
-
+import pywhatkit
+import webbrowser
 from spktakecmd import speak
 from spktakecmd import takeCmd
 
@@ -32,6 +33,27 @@ def searchGoogle(query):
 
         except:
             speak("No speakable output available")
+
+def searchYoutube(query):
+        speak("This is what I found")
+        query = query.replace("youtube search","")
+        query = query.replace("youtube","")
+        query = query.replace("hari","")
+        web  = "https://www.youtube.com/results?search_query=" + query
+        webbrowser.open(web)
+        # pywhatkit.playonyt(query)
+        speak("Done, Sir")
+
+
+def plyYoutube(query):
+    speak("This is what I found")
+    query = query.replace("youtube search", "")
+    query = query.replace("youtube", "")
+    query = query.replace("hari", "")
+    # web = "https://www.youtube.com/results?search_query=" + query
+    # webbrowser.open(web)
+    pywhatkit.playonyt(query)
+    speak("Done, Sir")
 
 
 
