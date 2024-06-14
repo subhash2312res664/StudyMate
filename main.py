@@ -49,7 +49,7 @@ if __name__ == "__main__":
             from search import whatis
             whatis(query)
 
-        elif "open google" in query:
+        elif "just open google" in query:
             webbrowser.open('google.com')
         elif "search google" in query:
             from search import searchGoogle
@@ -63,6 +63,10 @@ if __name__ == "__main__":
         elif "play youtube" in query:
             from search import plyYoutube
             plyYoutube(query)
+
+        elif "open" in query:
+            from openandcloseapp import openapp
+            openapp(query)
 
 
 
