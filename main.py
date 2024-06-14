@@ -1,5 +1,6 @@
 # This is main file
 import webbrowser
+import pywhatkit
 
 import pyttsx3
 import speech_recognition as sr
@@ -49,12 +50,12 @@ if __name__ == "__main__":
             from search import whatis
             whatis(query)
 
-        elif "just open google" in query:
-            webbrowser.open('google.com')
+        elif "open google" in query:
+            webbrowser.open("www.google.com")
         elif "search google" in query:
             from search import searchGoogle
             searchGoogle(query)
-        elif "just open youtube" in query:
+        elif "open youtube" in query:
             webbrowser.open('youtube.com')
 
         elif "search youtube" in query:
@@ -68,6 +69,9 @@ if __name__ == "__main__":
             from openandcloseapp import openapp
             openapp(query)
 
+        elif "close" in query:
+            from openandcloseapp import closeapp
+            closeapp(query)
 
 
 
