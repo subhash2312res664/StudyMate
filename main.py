@@ -56,7 +56,7 @@ if __name__ == "__main__":
             from search import searchGoogle
             searchGoogle(query)
         elif "open youtube" in query:
-            webbrowser.open('youtube.com')
+            webbrowser.open('https://www.youtube.com/')
 
         elif "search youtube" in query:
             from search import searchYoutube
@@ -73,6 +73,9 @@ if __name__ == "__main__":
             from openandcloseapp import closeapp
             closeapp(query)
 
+        elif "launch analysis file" in query:
+            import os
+            os.startfile("analysis.html")
 
 
 

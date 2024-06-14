@@ -30,7 +30,7 @@ def openapp(query):
 def closeapp(query):
     query = query.replace("close","")
     speak("Closing,sir")
-    if "one tab" in query or "1 tab" in query:
+    if "one tab" in query or "1 tab" in query or "tab":
         pyautogui.hotkey("ctrl", "w")
         speak("All tabs closed")
     elif "two tab" in query or "2 tab" in query:
