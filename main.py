@@ -77,6 +77,17 @@ if __name__ == "__main__":
             import os
             os.startfile("analysis.html")
 
+        elif "time now" in query or "current time" in query:
+            import datetime
+            tmn = datetime.datetime.now().strftime("%H:%M:%S")
+            print(f"Time is: {tmn}")
+            speak(f"Time is {tmn}")
+
+        # elif "screenshot" in query:
+        #     import pyautogui
+        #     im = pyautogui.screenshot()
+        #     im.save("ss.jpg")
+
 
 
 
