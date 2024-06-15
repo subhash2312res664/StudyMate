@@ -35,6 +35,10 @@ if __name__ == "__main__":
             print("I am fine")
             speak("I am fine")
 
+        elif "thanks" in query or "thank you" in query:
+            print("You're welcome Sir")
+            speak("you're Welcome Sir")
+
         elif "who created you" in query:
             print("I am Created under a Capstone Project-I, by the CSDA [23-2026] Students of IIT Patna, group of 16th.")
             speak("I am Created under a Capstone Project, by the CSDA Students of IIT Patna, group of 16th.")
