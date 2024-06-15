@@ -22,4 +22,6 @@ def powrstm(query):
             print("Ok Sir")
             speak("Ok Sir")
 
+    elif "sleep the system" in query:
+
 

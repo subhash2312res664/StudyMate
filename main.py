@@ -114,10 +114,9 @@ if __name__ == "__main__":
 
                     powrstm(query)
 
-                # elif "screenshot" in query:
-                #     import pyautogui
-                #     im = pyautogui.screenshot()
-                #     im.save("ss.jpg")
+                elif "screenshot" in query or "capture screen" in query:
+                    from screenshot import capturescreen
+                    capturescreen()
 
 
 
