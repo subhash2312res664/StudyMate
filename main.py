@@ -87,6 +87,12 @@ if __name__ == "__main__":
             print(f"Time is: {tmn}")
             speak(f"Time is {tmn}")
 
+
+
+        elif "shutdown the system" in query or "restart the system" in query:
+            from powermachine import powrstm
+            powrstm(query)
+
         # elif "screenshot" in query:
         #     import pyautogui
         #     im = pyautogui.screenshot()
