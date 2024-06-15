@@ -72,7 +72,6 @@ if __name__ == "__main__":
                     webbrowser.open("www.google.com")
                 elif "search google" in query:
                     from search import searchGoogle
-
                     searchGoogle(query)
                 elif "open youtube" in query:
                     webbrowser.open('https://www.youtube.com/')
@@ -128,6 +127,14 @@ if __name__ == "__main__":
                 elif "ip address" in query:
                     from myipaddress import checkip
                     checkip()
+
+                elif "source code" in query:
+                    import webbrowser
+                    url = "https://github.com/subhash2312res664/StudyMate"
+                    webbrowser.open(url)
+                    speak("This is the source code")
+
+
 
 
 
