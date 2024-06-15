@@ -9,11 +9,14 @@ from spktakecmd import speak
 from spktakecmd import takeCmd
 
 if __name__ == "__main__":
+    Hari_welcome = speak("Hey, I am HARI, and welcome in"
+                         "  Virtual world!!..")
+    Hari_ord = "I am Hari, How can i Assist you?."
+
     while True:
         query = takeCmd().lower()
         if "wake up" in query:
             from greetme import greet
-
             print(f"Hello, {greet()} Sir.")
             speak(f"Hello, {greet()} Sir.")
             print("How can i help you?")
@@ -115,6 +118,13 @@ if __name__ == "__main__":
                 #     import pyautogui
                 #     im = pyautogui.screenshot()
                 #     im.save("ss.jpg")
+
+
+
+        elif "stop" in query:
+            print("Done")
+            speak("Done")
+            exit()
 
 
 
