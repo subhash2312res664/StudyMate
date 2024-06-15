@@ -9,9 +9,10 @@ from spktakecmd import speak
 from spktakecmd import takeCmd
 
 if __name__ == "__main__":
-    Hari_welcome = speak("Hey, I am HARI, and welcome in"
-                         "  Virtual world!!..")
+    print("Hey, I am Hari, and welcome in Virtual world!!..")
+    speak("Hey, I am HARI, and welcome in, Virtual world")
     Hari_ord = "I am Hari, How can i Assist you?."
+
 
     while True:
         query = takeCmd().lower()
@@ -111,7 +112,9 @@ if __name__ == "__main__":
                     print(f"Time is: {tmn}")
                     speak(f"Time is {tmn}")
 
-
+                elif "moodle" in query or "model" in query:
+                    from search import searchMoodle
+                    searchMoodle()
 
                 elif "shutdown the system" in query or "restart the system" in query or "sleep the system" in query:
                     from powermachine import powrstm
