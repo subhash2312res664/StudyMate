@@ -17,6 +17,9 @@ def openapp(query):
         query = query.replace("launch","")
         query = query.replace(" ","")
         webbrowser.open(f"https://www.{query}")
+    elif "task manager" in query:
+        import pyautogui
+        pyautogui.hotkey("ctrl","shift","esc")
     else:
         keys = list(dictapp.keys())
         for app in keys:
@@ -27,10 +30,11 @@ def openapp(query):
                 #path: "c:/Window/system32/notepad.exe"
 
 
+
 def closeapp(query):
     query = query.replace("close","")
     speak("Closing,sir")
-    if "one tab" in query or "1 tab" in query or "tab":
+    if "one tab" in query or "1 tab" in query:
         pyautogui.hotkey("ctrl", "w")
         speak("All tabs closed")
     elif "two tab" in query or "2 tab" in query:

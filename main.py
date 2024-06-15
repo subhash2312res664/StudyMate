@@ -97,8 +97,12 @@ if __name__ == "__main__":
 
                 elif "launch analysis file" in query:
                     import os
-
                     os.startfile("analysis.html")
+
+                elif "launch salary predictor" in query:
+                    import webbrowser
+                    url = "https://salary-predictor-8qda.onrender.com/"
+                    webbrowser.open(url)
 
                 elif "time now" in query or "current time" in query:
                     import datetime
