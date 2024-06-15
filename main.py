@@ -118,6 +118,11 @@ if __name__ == "__main__":
                     from screenshot import capturescreen
                     capturescreen()
 
+                elif "ip address" in query:
+                    from myipaddress import checkip
+                    checkip()
+
+
 
 
         elif "stop" in query:
