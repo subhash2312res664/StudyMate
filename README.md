@@ -20,4 +20,4 @@ Project Name: <b> StudyMate</b>
 4. Saurav Mehta  <br>
     I'd: <a href="saurav_2312res896@iitp.ac.in">saurav_2312res896</a>  <br>
 5. Suyash Mukherjee  <br>
-    I'd: <a href="suyash_2312res690@iitp.ac.in">suyansh_2312res690</a>
+    I'd: <a href="suyash_2312res690@iitp.ac.in">suyash_2312res690</a>
