@@ -23,6 +23,13 @@ def powrstm(query):
             print("Ok Sir")
             speak("Ok Sir")
 
+    elif "lock the system" in query:
+        import pyautogui as pt
+        pt.hotkey('win', 'x')
+        pt.press('u')
+        pt.press('s')
+
+
     # elif "sleep the system" in query:
 
 
