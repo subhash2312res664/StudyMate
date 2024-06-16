@@ -14,6 +14,7 @@ def powrstm(query):
 
 
     elif "restart the system" in query:
+
         speak("Are You sure you want to restart")
         shutdown = input("Do you wish to shutdown your computer? (y/n)")
         if shutdown == "y":
@@ -22,6 +23,6 @@ def powrstm(query):
             print("Ok Sir")
             speak("Ok Sir")
 
-    elif "sleep the system" in query:
+    # elif "sleep the system" in query:
 
 

@@ -1,11 +1,12 @@
 import webbrowser
 import pywhatkit
 import pyautogui
+import time
 import os
 
 from spktakecmd import speak
 
-dictapp = {"paint":"mspaint","commandprompt":"cmd","vscode":"code","word":"winword","chrome":"chrome","excel":"excel",
+dictapp = {"paint":"mspaint","commandprompt":"cmd","vscode":"code","word":"winword","calculator":"calc","chrome":"chrome","excel":"excel",
            "powerpoint":"powerpnt","brave":"brave","file manager":"explorer","notepad":"notepad"}
 
 def openapp(query):
@@ -25,6 +26,10 @@ def openapp(query):
         web = "https://cet.iitp.ac.in/moodle/?redirect=0"
         webbrowser.open(web)
         speak("Done, Sir, Focus on your Study, Best of Luck!!")
+    elif "library" in query:
+        speak("Opening in My Loft Library..!")
+        web = "https://app.myloft.xyz/user/login"
+        webbrowser.open(web)
     else:
         keys = list(dictapp.keys())
         for app in keys:
@@ -41,28 +46,28 @@ def closeapp(query):
     speak("Closing,sir")
     if "one tab" in query or "1 tab" in query:
         pyautogui.hotkey("ctrl", "w")
-        speak("All tabs closed")
+        speak("Done Sir")
     elif "two tab" in query or "2 tab" in query:
         for i in range(2):
             pyautogui.hotkey("ctrl", "w")
-            sleep(0.5)
-        speak("All tabs closed")
+            time.sleep(0.5)
+        speak("Done Sir")
     elif "three tab" in query or "3 tab" in query:
         for i in range(3):
             pyautogui.hotkey("ctrl", "w")
-            sleep(0.5)
-        speak("All tabs closed")
+            time.sleep(0.5)
+        speak("Done Sir")
 
     elif "four tab" in query or "4 tab" in query:
         for i in range(4):
             pyautogui.hotkey("ctrl", "w")
-            sleep(0.5)
-        speak("All tabs closed")
+            time.sleep(0.5)
+        speak("Done Sir")
     elif "five tab" in query or "5 tab" in query:
         for i in range(5):
             pyautogui.hotkey("ctrl", "w")
-            sleep(0.5)
-        speak("All tabs closed")
+            time.sleep(0.5)
+        speak("Done Sir")
 
     else:
         keys = list(dictapp.keys())

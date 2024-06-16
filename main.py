@@ -134,6 +134,11 @@ if __name__ == "__main__":
                     webbrowser.open(url)
                     speak("This is the source code")
 
+                elif "email" in query or "mail" in query:
+                    from emailing import emailfn
+                    emailfn()
+
+
 
 
 
