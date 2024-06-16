@@ -18,6 +18,9 @@ def openapp(query):
         query = query.replace("launch","")
         query = query.replace(" ","")
         webbrowser.open(f"https://www.{query}")
+    elif "setting" in query:
+        import pyautogui as pt
+        pt.hotkey('win','i')
     elif "task manager" in query:
         import pyautogui
         pyautogui.hotkey("ctrl","shift","esc")

@@ -8,6 +8,9 @@ def controller(query):
     elif "maximize" in  query:
         pt.hotkey('alt','space')
         pt.press('x')
+    elif "type" in query:
+        query = query.replace("type","")
+        pt.typewrite(query,0.2)
     elif "volumeup" in query:
         for i in range(20):
             pt.press('volumeup')
@@ -15,4 +18,5 @@ def controller(query):
         for i in range(20):
             pt.press('volumedown')
     elif "mute" in query or "unmute" in query:
-        pt.press
+        pt.press('volumemute')
+

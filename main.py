@@ -138,6 +138,18 @@ if __name__ == "__main__":
                     from emailing import emailfn
                     emailfn()
 
+                ######
+                #Controller
+                elif "minimize" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "maximize" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "type" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+
 
 
 
