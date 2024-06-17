@@ -160,6 +160,9 @@ if __name__ == "__main__":
                 elif "subtitles" in query or "captions" in query or "miniplayer" in query or "theater mode" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
+                elif "scroll up" in query or "scroll down" in query or "fast scroll up" in query or "fast scroll down" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
 
 
         elif "stop" in query:
