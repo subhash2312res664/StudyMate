@@ -32,4 +32,31 @@ def controller(query):
     elif "theater mode" in query:
         pt.press('t')
 
+    elif "scroll up" in query or "scroll down" in query:
+        if "scroll up" in query:
+            pt.moveTo(950, 510)
+            for i in range(10):
+                pt.scroll(50)
+                sleep(0.1)
+        if "scroll down" in query:
+            pt.moveTo(950, 510)
+            for i in range(10):
+                pt.scroll(-50)
+                sleep(0.1)
+        if "fast scroll up" in query:
+            pt.moveTo(950, 510)
+            for i in range(10):
+                pt.scroll(1000)
+        if "fast scroll down" in query:
+            pt.moveTo(950, 510)
+            for i in range(10):
+                pt.scroll(-1000)
+
+
+
+
+    #
+
+
+
 
