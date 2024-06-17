@@ -47,9 +47,13 @@ def openapp(query):
 def closeapp(query):
     query = query.replace("close","")
     speak("Closing,sir")
+
     if "one tab" in query or "1 tab" in query:
         pyautogui.hotkey("ctrl", "w")
         speak("Done Sir")
+    elif "window" in query:
+        import pyautogui as pt
+        pt.hotkey('alt','f4')
     elif "two tab" in query or "2 tab" in query:
         for i in range(2):
             pyautogui.hotkey("ctrl", "w")

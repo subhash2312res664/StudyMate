@@ -19,4 +19,17 @@ def controller(query):
             pt.press('volumedown')
     elif "mute" in query or "unmute" in query:
         pt.press('volumemute')
+    elif "play" in query or "pause" in query:
+        pt.press('k')
+    elif "full screen window" in query or "exit full screen window" in query:
+        pt.press('f11')
+    elif "enter" in query:
+        pt.press('enter')
+    elif "subtitles" in query or "captions" in query:
+        pt.press('c')
+    elif "miniplayer" in query:
+        pt.press('i')
+    elif "theater mode" in query:
+        pt.press('t')
+
 

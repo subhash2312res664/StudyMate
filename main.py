@@ -137,29 +137,37 @@ if __name__ == "__main__":
                 elif "email" in query or "mail" in query:
                     from emailing import emailfn
                     emailfn()
-
                 ######
                 #Controller
-                elif "minimize" in query:
+                elif "minimize" in query or "maximize" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "maximize" in query:
+                elif "type" in query or "enter" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "type" in query:
+                elif "volumeup" in query or "volumedown" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-
-
-
-
-
+                elif "mute" in query or "unmute" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "play" in query or "pause" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "full screen window" in query or "exit full screen window" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "subtitles" in query or "captions" in query or "miniplayer" in query or "theater mode" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
 
 
         elif "stop" in query:
             print("Done")
             speak("Done")
             exit()
+
+
 
 
 
