@@ -109,7 +109,7 @@ if __name__ == "__main__":
                     timenow()
 
                 elif "moodle" in query or "model" in query:
-                    from search import searchMoodle
+                    from myLmsMoodlectrl import searchMoodle
                     searchMoodle()
 
                 elif "shutdown the system" in query or "restart the system" in query or "sleep the system" in query:

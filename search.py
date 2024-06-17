@@ -55,12 +55,12 @@ def plyYoutube(query):
     pywhatkit.playonyt(query)
     speak("Done, Sir")
 
-def searchMoodle():
-    # if "moodle" in query:
-        speak("Opening IIT Patna Moodle..!")
-        web  = "https://cet.iitp.ac.in/moodle/?redirect=0"
-        webbrowser.open(web)
-        speak("Done, Sir, Focus on your Study, Best of Luck!!")
+# def searchMoodle():
+#     # if "moodle" in query:
+#         speak("Opening IIT Patna Moodle..!")
+#         web  = "https://cet.iitp.ac.in/moodle/?redirect=0"
+#         webbrowser.open(web)
+#         speak("Done, Sir, Focus on your Study, Best of Luck!!")
 
 
 
