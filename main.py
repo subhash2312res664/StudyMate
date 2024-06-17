@@ -73,6 +73,17 @@ if __name__ == "__main__":
                 elif "search google" in query:
                     from search import searchGoogle
                     searchGoogle(query)
+                ####LMS Moodle##
+                elif "moodle" in query or "model" in query:
+                    from myLmsMoodlectrl import searchMoodle
+                    searchMoodle()
+                # if "go to home" in query or "go to dashboard" in query:
+                #     from myLmsMoodlectrl import moodle
+                #     moodle(query)
+
+                #####
+
+
                 elif "open youtube" in query:
                     webbrowser.open('https://www.youtube.com/')
 
@@ -108,9 +119,6 @@ if __name__ == "__main__":
                     from greetme import timenow
                     timenow()
 
-                elif "moodle" in query or "model" in query:
-                    from myLmsMoodlectrl import searchMoodle
-                    searchMoodle()
 
                 elif "shutdown the system" in query or "restart the system" in query or "sleep the system" in query:
                     from powermachine import powrstm
