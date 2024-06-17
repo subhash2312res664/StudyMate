@@ -52,6 +52,56 @@ def controller(query):
             for i in range(10):
                 pt.scroll(-1000)
 
+    elif "crope screenshot" in query:
+        pt.hot('prtscr')
+    elif "print" in query:
+        pt.hotkey('ctrl','p')
+    elif "save" in query:
+        pt.hotkey('ctrl','s')
+    elif "select all" in query or "all select" in query:
+        pt.hotkey('ctrl','a')
+    elif "bold" in query:
+        pt.hotkey('ctrl','b')
+    elif "copy" in query:
+        pt.hotkey('ctrl','c')
+    elif "duplicate" in query or 'bookmark' :
+        pt.hotkey('ctrl','d')
+    elif "centre" in query:
+        pt.hotkey('ctrl','e')
+    elif "find box" in query:
+        pt.hotkey('ctrl','f')
+    elif "match next" in query or "find next" in query:
+        pt.hotkey('ctrl','g')
+    elif "history" in query or "replace box" in query:
+        pt.hotkey('ctrl','h')
+    elif "italic" in query:
+        pt.hotkey('ctrl', 'i')
+    elif "download" in query:
+        pt.hotkey('ctrl', 'j')
+    elif "hyperlink" in query:
+        pt.hotkey('ctrl', 'k')
+    elif "address bar" in query:
+        pt.hotkey('ctrl', 'l')
+    elif "new window" in query or "new document" in query:
+        pt.hotkey('ctrl', 'n')
+    # elif "open file" in query:
+    #     pt.hotkey('ctrl', 'o')
+    elif "refress the page" in query:
+        pt.hotkey('ctrl', 'r')
+    elif "underline" in query:
+        pt.hotkey('ctrl', 'u')
+    elif "paste" in query:
+        pt.hotkey('ctrl', 'v')
+    # elif "close current window" in query:
+    #     pt.hotkey('ctrl', 'w')
+    elif "cut" in query:
+        pt.hotkey('ctrl', 'x')
+    elif "redo" in query:
+        pt.hotkey('ctrl', 'y')
+    elif "undo" in query:
+        pt.hotkey('ctrl', 'z')
+
+
 
 
 

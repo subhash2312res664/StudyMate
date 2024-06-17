@@ -98,7 +98,6 @@ if __name__ == "__main__":
 
                 elif "open" in query:
                     from openandcloseapp import openapp
-
                     openapp(query)
 
                 elif "close" in query:
@@ -168,6 +167,11 @@ if __name__ == "__main__":
                 elif "scroll up" in query or "scroll down" in query or "fast scroll up" in query or "fast scroll down" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
+                elif "crope screenshot" in query or "print" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+
+
 
 
         elif "stop" in query:
