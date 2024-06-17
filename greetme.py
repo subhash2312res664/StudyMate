@@ -16,3 +16,9 @@ def greet():
 #
 # greet()
 # print(grt)
+def timenow():
+    import datetime
+    from spktakecmd import speak
+    tmn = datetime.datetime.now().strftime("%H:%M")
+    print(f"Time is: {tmn}")
+    speak(f"Time is {tmn}")

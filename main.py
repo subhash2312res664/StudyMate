@@ -105,11 +105,8 @@ if __name__ == "__main__":
                     webbrowser.open(url)
 
                 elif "time now" in query or "current time" in query:
-                    import datetime
-
-                    tmn = datetime.datetime.now().strftime("%H:%M:%S")
-                    print(f"Time is: {tmn}")
-                    speak(f"Time is {tmn}")
+                    from greetme import timenow
+                    timenow()
 
                 elif "moodle" in query or "model" in query:
                     from search import searchMoodle
