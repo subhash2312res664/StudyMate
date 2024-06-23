@@ -32,6 +32,9 @@ def controller(query):
     elif "theater mode" in query:
         pt.press('t')
 
+    elif "go back" in query or "escap" in query:
+        pt.hotkey('escape')
+
     elif "scroll up" in query or "scroll down" in query:
         if "scroll up" in query:
             pt.moveTo(950, 510)
@@ -52,8 +55,8 @@ def controller(query):
             for i in range(10):
                 pt.scroll(-1000)
 
-    elif "crope screenshot" in query:
-        pt.hot('prtscr')
+    elif "crop screenshot" in query or "cropped screenshot" in query or "crop a screenshot" in query:
+        pt.hotkey('prtscr')
     elif "print" in query:
         pt.hotkey('ctrl','p')
     elif "save" in query:
@@ -64,7 +67,7 @@ def controller(query):
         pt.hotkey('ctrl','b')
     elif "copy" in query:
         pt.hotkey('ctrl','c')
-    elif "duplicate" in query or 'bookmark' :
+    elif "duplicate" in query or 'bookmark' in query:
         pt.hotkey('ctrl','d')
     elif "centre" in query:
         pt.hotkey('ctrl','e')
@@ -90,7 +93,7 @@ def controller(query):
         pt.hotkey('ctrl', 'r')
     elif "underline" in query:
         pt.hotkey('ctrl', 'u')
-    elif "paste" in query:
+    elif "paste" in query or "pest" in query:
         pt.hotkey('ctrl', 'v')
     # elif "close current window" in query:
     #     pt.hotkey('ctrl', 'w')
@@ -100,6 +103,11 @@ def controller(query):
         pt.hotkey('ctrl', 'y')
     elif "undo" in query:
         pt.hotkey('ctrl', 'z')
+
+    ##
+
+    elif "minimise all window" in query:
+        pt.hotkey('win','m')
 
 
 

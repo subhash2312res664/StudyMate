@@ -63,7 +63,7 @@ if __name__ == "__main__":
                     speak(f"There are {len(members)} members in group 16:\n")
                     speak(f"{members[0:]}")
 
-                elif "what is" in query or "who is" in query:
+                elif "what is" in query or "who is" in query or "wikipedia" in query:
                     from search import whatis
 
                     whatis(query)
@@ -102,21 +102,28 @@ if __name__ == "__main__":
 
                 elif "close" in query:
                     from openandcloseapp import closeapp
-
                     closeapp(query)
 
-                elif "launch analysis file" in query:
+                elif "go back" in query or "escape" in query or "minimise all window" in query:
+                    from mouseandkeycontroller import controller
+                    controller(query)
+
+                elif "launch analysis file" in query or "analysis" in query:
                     import os
                     os.startfile("analysis.html")
 
-                elif "launch salary predictor" in query:
-                    import webbrowser
-                    url = "https://salary-predictor-8qda.onrender.com/"
-                    webbrowser.open(url)
+                elif "launch salary predictor" in query or "salary predictor" in query:
+                    from salaryPredictor import salaryPre
+                    salaryPre()
+
 
                 elif "time now" in query or "current time" in query:
-                    from greetme import timenow
-                    timenow()
+                    from CurrentTimeandDate import curr_time
+                    curr_time()
+
+                elif "today day" in query or "current date" in query:
+                    from CurrentTimeandDate import curr_date
+                    curr_date()
 
 
                 elif "shutdown the system" in query or "restart the system" in query or "sleep the system" in query:
@@ -167,14 +174,28 @@ if __name__ == "__main__":
                 elif "scroll up" in query or "scroll down" in query or "fast scroll up" in query or "fast scroll down" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "crope screenshot" in query or "print" in query:
+                elif "crop screenshot" in query or "cropped screenshot" in query or "crop a screenshot" in query or "print" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
+                elif ("save" in query or "select all" in query or "all select" in query or "bold" in query or
+                      "copy" in query or "duplicate" in query or 'bookmark' in query or "centre" in query or
+                      "match next" in query or "find next" in query or "italic" in query or "download" in query or
+                      "hyperlink" in query or "address bar" in query or "new window" in query or "new document" in query or
+                      "refress the page" in query or "underline" in query or "paste" in query  or "pest" in query or "cut" in query or "redo" in query
+                      or "undo" in query):
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "unit conversion" in query:
+                    from unitconvertor import untcnv
+                    untcnv()
+                elif "price of" in query:
+                    from checkprodonl import getpriceon
+                    getpriceon(query)
 
 
 
 
-        elif "stop" in query:
+        elif "stop" in query or "cancel" in query:
             print("Done")
             speak("Done")
             exit()

@@ -16,8 +16,8 @@ def takeCmd():
         print("I'm Listening.......")
         r.pause_threshold = 1
         r.energy_threshold = 300
-        # r.adjust_for_ambient_noise(source, duration=1)
-        audio = r.listen(source, 0, 4)
+        r.adjust_for_ambient_noise(source)
+        audio = r.listen(source, 0, 5)
     try:
         print("Processing......")
         query = r.recognize_google(audio, language='en-in')

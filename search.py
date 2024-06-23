@@ -7,6 +7,8 @@ from spktakecmd import takeCmd
 
 def whatis(query):
     speak("Searching wikipedia...")
+    query = query.replace("serch","")
+    query = query.replace("wikipedia","")
     # query = query.replace("who is","")
     # query = query.replace("what is","")
     try:
