@@ -66,34 +66,43 @@ if __name__ == "__main__":
 
                 elif "what is" in query or "who is" in query or "wikipedia" in query:
                     from search import whatis
-
                     whatis(query)
+
+                elif "price of" in query:
+                    from checkprodonl import getpriceon
+                    getpriceon(query)
+
+                elif "translate" in query:
+                    from deep_translate import translatelang
+                    translatelang()
+
+                elif "how to save a notepad message" in query or "how to save notepad message" in query:
+                    from showhowto import howto
+                    howto()
+
+                elif "unit conversion" in query:
+                    from unitconvertor import untcnv
+                    untcnv()
 
                 elif "open google" in query:
                     webbrowser.open("www.google.com")
                 elif "search google" in query:
                     from search import searchGoogle
                     searchGoogle(query)
-                ####LMS Moodle##
+
                 elif "moodle" in query or "model" in query:
                     from myLmsMoodlectrl import searchMoodle
                     searchMoodle()
-                # if "go to home" in query or "go to dashboard" in query:
-                #     from myLmsMoodlectrl import moodle
-                #     moodle(query)
-
-                #####
 
                 elif "open youtube" in query:
                     webbrowser.open('https://www.youtube.com/')
 
                 elif "search youtube" in query:
                     from search import searchYoutube
-
                     searchYoutube(query)
+
                 elif "play youtube" in query:
                     from search import plyYoutube
-
                     plyYoutube(query)
 
                 elif "open" in query:
@@ -116,7 +125,6 @@ if __name__ == "__main__":
                     from salaryPredictor import salaryPre
                     salaryPre()
 
-
                 elif "time now" in query or "current time" in query:
                     from CurrentTimeandDate import curr_time
                     curr_time()
@@ -125,10 +133,9 @@ if __name__ == "__main__":
                     from CurrentTimeandDate import curr_date
                     curr_date()
 
-
                 elif ("shutdown the system" in query or "restart the system" in query or
-                      "sleep the system" in query or "slip the system" in query \
-                        or "lock the system" in query or "slip di system" in query):
+                      "sleep the system" in query or "slip the system" in query or
+                      "lock the system" in query or "slip di system" in query):
                     from powermachine import powrstm
                     powrstm(query)
 
@@ -153,8 +160,7 @@ if __name__ == "__main__":
                 elif "email" in query or "mail" in query:
                     from emailing import emailfn
                     emailfn()
-                ######
-                #Controller
+
                 elif "minimize" in query or "minimise" in query or "maximize" in query or "maximise":
                     from mouseandkeycontroller import controller
                     controller(query)
@@ -187,20 +193,6 @@ if __name__ == "__main__":
                     from mouseandkeycontroller import controller
                     controller(query)
 
-                elif "unit conversion" in query:
-                    from unitconvertor import untcnv
-                    untcnv()
-                elif "price of" in query:
-                    from checkprodonl import getpriceon
-                    getpriceon(query)
-                elif "translate" in query:
-                    from deep_translate import translatelang
-                    translatelang()
-
-                elif "how to save a notepad message" in query or "how to save notepad message" in query:
-                    from showhowto import howto
-                    howto()
-
                 elif ("save" in query or "select all" in query or "all select" in query or "bold" in query or
                       "copy" in query or "duplicate" in query or 'bookmark' in query or "centre" in query or
                       "match next" in query or "find next" in query or "italic" in query or "download" in query or
@@ -212,29 +204,10 @@ if __name__ == "__main__":
 
 
 
-
         elif "stop" in query or "cancel" in query:
             print("Done")
             speak("Done")
             exit()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# query = takeCmd()
-#
-# print(query)
-# speak(f"{query}")
 
