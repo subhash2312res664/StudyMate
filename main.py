@@ -34,7 +34,7 @@ if __name__ == "__main__":
                     print("Yes Sir")
                     speak("Yes Sir")
 
-                elif "stop this program" in query:
+                elif "stop this program" in query or "close this program" in query:
                     print("Ok Sir, I am going to stop this Program.")
                     speak("Ok Sir, I am going to stop this Program.")
                     exit()
@@ -145,6 +145,10 @@ if __name__ == "__main__":
                     webbrowser.open(url)
                     speak("This is the source code")
 
+                elif "whatsapp" in query or "send message" in query:
+                    from Whatsappmessage import cnfmsg
+                    cnfmsg()
+
                 elif "email" in query or "mail" in query:
                     from emailing import emailfn
                     emailfn()
@@ -191,6 +195,9 @@ if __name__ == "__main__":
                 elif "price of" in query:
                     from checkprodonl import getpriceon
                     getpriceon(query)
+                elif "translate" in query:
+                    from deep_translate import translatelang
+                    translatelang()
 
 
 

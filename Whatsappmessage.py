@@ -18,20 +18,21 @@ def send_whatsapp_message(phone_number, message):
         print(f"An error occurred: {e}")
 
 
-speak("Enter Recipient Whatsapp Number.:")
-while True:
-    recipient_number = takeCmd()
-    recipient_number = recipient_number.replace(" ","")
-    if "cancel" in recipient_number or "back" in recipient_number:
-        speak("Ok,Sir.")
-        break
-    if recipient_number.isdigit() and len(recipient_number) == 10:
-        recipient_number = '+91' + recipient_number  # Assuming country code is '+91' for India
-        break
-    else:
-        speak("Please speak a valid 10 digit number.")
+def cnfmsg():
+    speak("What is Recipient Whatsapp Number.:")
+    while True:
+        recipient_number = takeCmd()
+        recipient_number = recipient_number.replace(" ", "")
+        if "cancel" in recipient_number or "back" in recipient_number:
+            speak("Ok,Sir.")
+            break
+        if recipient_number.isdigit() and len(recipient_number) == 10:
+            recipient_number = '+91' + recipient_number  # Assuming country code is '+91' for India
+            break
+        else:
+            speak("Please speak a valid 10 digit number.")
 
-print("What is the message?")
-speak("What is the message?")
-message_text = takeCmd()
-send_whatsapp_message(recipient_number, message_text)
+    print("What is the message?")
+    speak("What is the message?")
+    message_text = takeCmd()
+    send_whatsapp_message(recipient_number, message_text)
