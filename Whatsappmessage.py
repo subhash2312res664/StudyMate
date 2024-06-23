@@ -19,7 +19,9 @@ def send_whatsapp_message(phone_number, message):
 
 
 def cnfmsg():
+    print("What is Recipient Whatsapp Number.:")
     speak("What is Recipient Whatsapp Number.:")
+
     while True:
         recipient_number = takeCmd()
         recipient_number = recipient_number.replace(" ", "")
@@ -30,7 +32,9 @@ def cnfmsg():
             recipient_number = '+91' + recipient_number  # Assuming country code is '+91' for India
             break
         else:
-            speak("Please speak a valid 10 digit number.")
+            print("Please speak a valid 10 digit number, or say cance/back to go main menu")
+            speak("Please speak a valid 10 digit number, or say cance to go main menu")
+
 
     print("What is the message?")
     speak("What is the message?")

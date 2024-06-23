@@ -2,20 +2,23 @@ import pyautogui as pt
 from time import sleep
 
 def controller(query):
-    if "minimize" in query:
+    if "minimize" in query or "minimise" in query:
         pt.hotkey('alt','space')
         pt.press('n')
-    elif "maximize" in  query:
+    elif "maximize" in query or "maximise" in query:
         pt.hotkey('alt','space')
         pt.press('x')
+    elif "restore" in query:
+        pt.hotkey('alt','space')
+        pt.press('r')
     elif "type" in query:
         query = query.replace("type","")
         pt.typewrite(query,0.2)
-    elif "volumeup" in query:
-        for i in range(20):
+    elif "volumeup" in query or "volume up" in query:
+        for i in range(10):
             pt.press('volumeup')
-    elif "volumedown" in query:
-        for i in range(20):
+    elif "volumedown" in query or "volume down" in query:
+        for i in range(10):
             pt.press('volumedown')
     elif "mute" in query or "unmute" in query:
         pt.press('volumemute')
@@ -27,9 +30,9 @@ def controller(query):
         pt.press('enter')
     elif "subtitles" in query or "captions" in query:
         pt.press('c')
-    elif "miniplayer" in query:
+    elif "miniplayer" in query or "mini player" in query:
         pt.press('i')
-    elif "theater mode" in query:
+    elif "theatre mode" in query or "theater mode" in query or "theatre mod" in query:
         pt.press('t')
 
     elif "go back" in query or "escap" in query:
@@ -55,7 +58,7 @@ def controller(query):
             for i in range(10):
                 pt.scroll(-1000)
 
-    elif "crop screenshot" in query or "cropped screenshot" in query or "crop a screenshot" in query:
+    elif "crop screen" in query:
         pt.hotkey('prtscr')
     elif "print" in query:
         pt.hotkey('ctrl','p')

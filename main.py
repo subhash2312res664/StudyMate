@@ -27,8 +27,8 @@ if __name__ == "__main__":
             while True:
                 query = takeCmd().lower()
                 if "go to sleep" in query:
-                    print("Ok Sir, I'm going to Sleep")
-                    speak("Ok Sir, I'm going to Sleep")
+                    print("Ok Sir, I'm going to Sleep, Say Wake Up to start.")
+                    speak("Ok Sir, I'm going to Sleep, Say Wake Up to start.")
                     break
 
                 elif "hello" in query:
@@ -48,7 +48,7 @@ if __name__ == "__main__":
                     print("I am fine")
                     speak("I am fine")
 
-                elif "thanks" in query or "thank you" in query:
+                elif "thanks" in query or "thank you" in query or "thank" in query or "thank u" in query:
                     print("You're welcome Sir")
                     speak("you're Welcome Sir")
 
@@ -121,14 +121,15 @@ if __name__ == "__main__":
                     from CurrentTimeandDate import curr_time
                     curr_time()
 
-                elif "today" in query or "current date" in query:
+                elif "today date" in query or "current date" in query:
                     from CurrentTimeandDate import curr_date
                     curr_date()
 
 
-                elif "shutdown the system" in query or "restart the system" in query or "sleep the system" in query:
+                elif ("shutdown the system" in query or "restart the system" in query or
+                      "sleep the system" in query or "slip the system" in query \
+                        or "lock the system" in query or "slip di system" in query):
                     from powermachine import powrstm
-
                     powrstm(query)
 
                 elif "screenshot" in query or "capture screen" in query:
@@ -154,13 +155,16 @@ if __name__ == "__main__":
                     emailfn()
                 ######
                 #Controller
-                elif "minimize" in query or "maximize" in query:
+                elif "minimize" in query or "minimise" in query or "maximize" in query or "maximise":
+                    from mouseandkeycontroller import controller
+                    controller(query)
+                elif "restore" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
                 elif "type" in query or "enter" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "volumeup" in query or "volumedown" in query:
+                elif "volumeup" in query or "volume up" in query or "volumedown" in query or "volume down" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
                 elif "mute" in query or "unmute" in query:
@@ -172,23 +176,17 @@ if __name__ == "__main__":
                 elif "full screen window" in query or "exit full screen window" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "subtitles" in query or "captions" in query or "miniplayer" in query or "theater mode" in query:
+                elif ("subtitles" in query or "captions" in query or "miniplayer" in query or "mini player" in query or
+                      "theater mode" in query or "theatre mode" in query or "theatre mod" in query):
                     from mouseandkeycontroller import controller
                     controller(query)
                 elif "scroll up" in query or "scroll down" in query or "fast scroll up" in query or "fast scroll down" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "crop screenshot" in query or "cropped screenshot" in query or "crop a screenshot" in query or "print" in query:
+                elif "crop screen" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif ("save" in query or "select all" in query or "all select" in query or "bold" in query or
-                      "copy" in query or "duplicate" in query or 'bookmark' in query or "centre" in query or
-                      "match next" in query or "find next" in query or "italic" in query or "download" in query or
-                      "hyperlink" in query or "address bar" in query or "new window" in query or "new document" in query or
-                      "refress the page" in query or "underline" in query or "paste" in query  or "pest" in query or "cut" in query or "redo" in query
-                      or "undo" in query):
-                    from mouseandkeycontroller import controller
-                    controller(query)
+
                 elif "unit conversion" in query:
                     from unitconvertor import untcnv
                     untcnv()
@@ -202,6 +200,15 @@ if __name__ == "__main__":
                 elif "how to save a notepad message" in query or "how to save notepad message" in query:
                     from showhowto import howto
                     howto()
+
+                elif ("save" in query or "select all" in query or "all select" in query or "bold" in query or
+                      "copy" in query or "duplicate" in query or 'bookmark' in query or "centre" in query or
+                      "match next" in query or "find next" in query or "italic" in query or "download" in query or
+                      "hyperlink" in query or "address bar" in query or "new window" in query or "new document" in query or
+                      "refress the page" in query or "underline" in query or "paste" in query or "pest" in query or
+                      "cut" in query or "redo" in query or "undo" in query):
+                    from mouseandkeycontroller import controller
+                    controller(query)
 
 
 
