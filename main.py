@@ -11,7 +11,8 @@ from spktakecmd import takeCmd
 if __name__ == "__main__":
     print("Hey, I am Hari, and welcome in Virtual world!!..")
     speak("Hey, I am HARI, and welcome in, Virtual world")
-    Hari_ord = "I am Hari, How can i Assist you?."
+    print("Say,Wake up to start or stop.")
+    speak("Say, wake up to start or stop.")
 
 
     while True:
@@ -83,7 +84,6 @@ if __name__ == "__main__":
 
                 #####
 
-
                 elif "open youtube" in query:
                     webbrowser.open('https://www.youtube.com/')
 
@@ -121,7 +121,7 @@ if __name__ == "__main__":
                     from CurrentTimeandDate import curr_time
                     curr_time()
 
-                elif "today day" in query or "current date" in query:
+                elif "today" in query or "current date" in query:
                     from CurrentTimeandDate import curr_date
                     curr_date()
 
@@ -198,6 +198,10 @@ if __name__ == "__main__":
                 elif "translate" in query:
                     from deep_translate import translatelang
                     translatelang()
+
+                elif "how to save a notepad message" in query or "how to save notepad message" in query:
+                    from showhowto import howto
+                    howto()
 
 
 
