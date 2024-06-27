@@ -25,7 +25,7 @@ def cnfmsg():
     while True:
         recipient_number = takeCmd()
         recipient_number = recipient_number.replace(" ", "")
-        if "cancel" in recipient_number or "back" in recipient_number:
+        if "cancel" in recipient_number or "back" in recipient_number or "stop" in recipient_number:
             speak("Ok,Sir.")
             break
         if recipient_number.isdigit() and len(recipient_number) == 10:

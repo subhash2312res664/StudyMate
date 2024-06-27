@@ -52,7 +52,7 @@ def sendemail():
         speak(f"You said {reciver_email} . Is that correct?  ")
         confirmation= takeCmd()
         print(f"Confirmation received: '{confirmation}'")
-        if "yes" in confirmation:
+        if "yes" in confirmation or "correct" in confirmation:
             break
 
         else:
