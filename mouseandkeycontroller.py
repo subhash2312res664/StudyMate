@@ -11,7 +11,7 @@ def controller(query):
     elif "restore" in query:
         pt.hotkey('alt','space')
         pt.press('r')
-    elif "type" in query:
+    elif "type" in query or "write" in query:
         query = query.replace("type","")
         pt.typewrite(query,0.2)
     elif "volumeup" in query or "volume up" in query:

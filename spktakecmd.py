@@ -15,7 +15,7 @@ def takeCmd():
     with sr.Microphone() as source:
         print("I'm Listening.......")
         r.pause_threshold = 1
-        r.energy_threshold = 300
+        r.energy_threshold = 500
         r.adjust_for_ambient_noise(source)
         audio = r.listen(source, 0, 5)
     try:

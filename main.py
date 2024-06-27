@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     while True:
         query = takeCmd().lower()
-        if "wake up" in query:
+        if "wake up" in query or "hari" in query or "start" in query:
             from greetme import greet
             print(f"Hello, {greet()} Sir.")
             speak(f"Hello, {greet()} Sir.")
@@ -58,7 +58,7 @@ if __name__ == "__main__":
                     speak("I am Created under a Capstone Project, by the CSDA Students of IIT Patna, group of 16th.")
 
                 elif "members in group 16" in query:
-                    members = ["Subhash Kumar Rana", "Aanchal Kumari", "Saurav Kumar", "Rajesh Kumar", "Suyansh Kumar"]
+                    members = ["Subhash Kumar Rana", "Aanchal Kumari", "Saurav Kumar", "Rajesh Kumar", "Suyash Kumar"]
                     print(f"There are {len(members)} members in group 16:\n",
                           f"{members[0:]}")
                     speak(f"There are {len(members)} members in group 16:\n")
@@ -118,8 +118,11 @@ if __name__ == "__main__":
                     controller(query)
 
                 elif "launch analysis file" in query or "analysis" in query:
+                    import webbrowser
                     import os
-                    os.startfile("analysis.html")
+                    abs_path = os.path.abspath("analysis.html")
+                    webbrowser.open(f'file://{abs_path}')
+                    # os.startfile("analysis.html")
 
                 elif "launch salary predictor" in query or "salary predictor" in query:
                     from salaryPredictor import salaryPre
@@ -158,8 +161,8 @@ if __name__ == "__main__":
                     cnfmsg()
 
                 elif "email" in query or "mail" in query:
-                    from emailing import emailfn
-                    emailfn()
+                    from emailsmtp import sendemail
+                    sendemail()
 
                 elif "minimize" in query or "minimise" in query or "maximize" in query or "maximise":
                     from mouseandkeycontroller import controller
@@ -167,7 +170,7 @@ if __name__ == "__main__":
                 elif "restore" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
-                elif "type" in query or "enter" in query:
+                elif "type" in query or "write" in query or "enter" in query:
                     from mouseandkeycontroller import controller
                     controller(query)
                 elif "volumeup" in query or "volume up" in query or "volumedown" in query or "volume down" in query:

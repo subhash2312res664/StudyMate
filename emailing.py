@@ -13,18 +13,21 @@ def sendEmail(user,password,to,content):
 def emailfn():
     #
     try:
-        print("What is the sender Email?")
-        speak("What is the sender Email?")
-        time.sleep(0.5)
-        user = takeCmd().lower()
-        user = user.replace(" ","")
-        user = user + "@gmail.com"
-        # print(f"Sender Email:{user}")
-        # speak("This is the sender email.")
-        time.sleep(0.5)
-        print("Enter sender password:")
-        speak("Enter sender Password")
-        password = input()
+        # print("What is the sender Email?")
+        # speak("What is the sender Email?")
+        # time.sleep(0.5)
+        # user = takeCmd().lower()
+        # user = user.replace(" ","")
+        # user = user + "@gmail.com"
+        # # print(f"Sender Email:{user}")
+        # # speak("This is the sender email.")
+        # time.sleep(0.5)
+        # print("Enter sender password:")
+        # speak("Enter sender Password")
+        # password = input()
+
+        user = "indiansubhashkumar@gmail.com"
+        password = "oobm qwul mgea ttvr"
 
         print("Please tell me the recipient's email address.")
         print("Example: sanjay235")
@@ -45,10 +48,10 @@ def emailfn():
         print(f"Sender Email:{user}")
         print(f"Recipient Email:{to}")
         print(f"Body Message:{content}")
-        print("Are you sure to send, press y/n for confermation")
-        speak("Are you sure to send, Press y/n for confermation")
-        conf = input("y/n:")
-        if conf == 'y':
+        print("Are you sure to send, say yes or No for confermation")
+        speak("Are you sure to send, say yes or no for confermation")
+        conf = takeCmd()
+        if conf == 'yes':
             sendEmail(user, password, to, content)
             print("Email has been sent Successfully!")
             speak("Email has been sent Successfully!")
