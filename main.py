@@ -58,7 +58,7 @@ if __name__ == "__main__":
                     speak("I am Created under a Capstone Project, by the CSDA Students of IIT Patna, group of 16th.")
 
                 elif "members in group 16" in query:
-                    members = ["Subhash Kumar Rana", "Aanchal Kumari", "Saurav Kumar", "Rajesh Kumar", "Suyash Kumar"]
+                    members = ["Subhash Kumar Rana", "Aanchal Kumari", "Saurav Mehta", "Rajesh Kumawat", "Suyash Mukharjee"]
                     print(f"There are {len(members)} members in group 16:\n",
                           f"{members[0:]}")
                     speak(f"There are {len(members)} members in group 16:\n")
